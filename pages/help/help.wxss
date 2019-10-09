@@ -1,0 +1,43 @@
+/* pages/help/help.wxss */
+
+.view {
+  text-align: center;
+  position:relative;
+}
+.view .title
+{
+  padding-bottom:10rpx; 
+  font-size: 40rpx;
+}
+.view img {
+  z-index:-1;
+}
+.view .contain
+{
+  position:relative;
+   z-index:2
+}
+p {
+  margin: 0.4em 0;
+}
+.image-one
+{
+  height: 440rpx;
+  width: 400rpx;
+}
+.image-two
+{
+  height: 320rpx;
+  width: 180rpx;
+  margin-left:70rpx;
+}
+.image-three
+{
+  height: 600rpx;
+  width: 490rpx;
+}
+.image-four
+{
+  height: 360rpx; 
+  width: 300rpx;
+}

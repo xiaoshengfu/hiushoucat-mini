@@ -1,0 +1,18 @@
+<import src='../order-template/order-template.wxml' />
+<view class="prompt" wx:if="{{information}}">
+  <text class="{{type}}">{{information}}</text>
+</view>
+<view wx:if="{{search > 0}}">
+  <block wx:for='{{newsList}}' wx:key="*this">
+    <view>
+      <template is="orderlist" data="{{item,arrays,activeTab,id}}" />
+      <text>{{item.wasteOrderId}}</text>
+    </view>
+  </block>
+</view>
+  <view class="search_no" wx:else  >
+    <view class="font_14">
+      <image class="scimg" src="/images/search_no.png" />
+    </view>
+    <text>暂无订单/(ㄒoㄒ)/~~</text>
+  </view>

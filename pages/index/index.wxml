@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="top">
+    <view class="month">
+      <view class="number">{{data.monthFinishedOrder||0}}</view>
+      <view class="text">月回收量(单)</view>
+    </view>
+    <view class="display show-item">
+      <view style='width:100%'>
+        <view class="text">{{data?data.unfinishedOrder :0}}</view>
+        <view class="text">未完成订单(单)</view>
+      </view>
+      <view style='width:100%'>
+        <view class="text">{{data?data.dayFinishedOrder:0 }}</view>
+        <view class="text">本日已完成(单)</view>
+      </view>
+    </view> 
+  </view>
+  <view class="box" >
+    <view class="display box-center box-item " >
+      <navigator url="undone-order/undone-order" class="position box-rb" >
+        <text class=" iconfont icon-xuqiudengji icon-size" style='color: #f26604;'></text>
+        <view>
+          <view class="text-one">未完成订单</view>
+          <view class="text-two">查看未完成订单</view>
+        </view>  
+      </navigator>
+      <navigator url="history-order/history-order" class="position box-b" >   
+        <text class="iconfont icon-lishidingdan icon-size " style='color: #00ACFF;'></text>
+        <view>
+          <view class="text-one">历史订单</view>
+          <view class="text-two">查看历史回收订单</view> 
+        </view>
+      </navigator>
+    </view>
+    <view class="display  box-center  box-item">
+      <navigator url="../help/help?id=1" class=" position box-r ">
+        <text class="iconfont icon-icon  icon-size" style='color: #00ACFF;'></text>
+        <view>
+          <view class="text-one">帮助</view>
+          <view class="text-two">了解回收猫</view>
+        </view>
+      </navigator>
+      <navigator url="../mine/mine" class="position border-lt ">
+        <text class="iconfont icon-wode icon-size" style='color: #886aea;'></text>
+        <view>
+          <view class="text-one">我的</view>
+          <view class="text-two">我的信息</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='bottom'>
+    <text class='text'>回收猫让回收与众不同 \n</text>
+    <text class='text'> SuperFive ©2018 - huihoumao.com</text>
+  </view>
+</view>

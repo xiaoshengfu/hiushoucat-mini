@@ -1,0 +1,49 @@
+<!--pages/mine/login/login.wxml-->
+<view class="prompt" wx:if="{{information}}">
+  <text class="{{type}}">{{information}}</text>
+</view>
+<view class='background'>
+  <view class='position'>
+    <form bindsubmit="loginSubmit">
+      <view class=" box">
+        <view class="display box-top">
+          <view class="box-tab {{activeTab==0?'on' : ''}}" data-activeTab="0" bindtap="changTab" >
+            手机验证登录
+          </view>
+          <view class="box-tab {{activeTab==1?'on' : ''}}" data-activeTab="1" bindtap="changTab">
+            账号密码登录
+          </view>
+        </view>
+        <!-- 手机验证登录 -->
+        <view wx:if="{{activeTab==0}}" class='box-font'>
+          <view class="display  option-input">
+            <text class=" iconfont icon-wode font-icon"></text>
+            <input type="number" bindinput="bindInput" id="tel" name="tel" maxlength="11" placeholder="手机号码" value='{{tel}}' />
+          </view> 
+          <view class="display option-input">
+            <text class=" iconfont icon-unie65b font-icon"></text>
+            <input type="number" bindinput="bindInput"  id="verifycode" name="verifycode" placeholder="验证码" />
+            <button bindtap="getVerifyCode" disabled="{{disabled}}" class="button" >
+              {{content}}
+            </button>
+          </view>
+        </view>
+
+        <!-- 账号密码登录 -->
+        <view wx:if="{{activeTab==1}}"class='box-font'>
+          <view class="display  option-input">
+            <text class=" iconfont icon-wode font-icon"></text>
+            <input type="number" bindinput="bindInput" id="mine" maxlength="11"  name='mine' placeholder="手机号码" value='{{tel}}' />
+          </view>
+          <view class="display option-input">
+            <text class=" iconfont  icon-unie65b font-icon"></text>
+            <input type="password"  class='password' bindinput="bindInput" password="true" id="password" name="password" placeholder="密码" />
+          </view>
+        </view>
+      </view>
+      <view class='login-button'>
+        <button formType="submit" hover-class="button-hover" class="login ">登录</button>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+@import '../order-template/order-template.wxss';
+page
+{
+  background-color:#E7EAEF;
+}

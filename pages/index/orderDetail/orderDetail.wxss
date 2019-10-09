@@ -1,0 +1,113 @@
+@import "orderDetail-template/orderDetail-template.wxss";
+@import "history-orderDetail-template/history-orderDetail-template.wxss";
+
+.page {
+  background: 	#DCDCDC;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.contain-item {
+  margin-top: 30rpx;
+  background: white;
+}
+
+.Titles {
+  padding: 0 40rpx;
+  border-bottom: 6rpx #ddd solid;
+}
+
+.Titles .title {
+  padding: 20rpx 0;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 40rpx;
+}
+ 
+.item {
+  width: 200rpx;
+  font-size: 30rpx;
+  white-space: nowrap;  /*不换行*/
+}
+
+.contain {
+  color: #999;
+  font-size: 30rpx;
+  margin-top: 2rpx;
+  white-space: nowrap;  /*不换行*/
+}
+
+.br {
+  height: 150rpx;
+}
+
+.bottom {
+  font-size: 32rpx;
+  position: fixed;
+  width: 100%;
+  bottom: 0rpx;
+  left: 0;
+  background: white;
+  border-top: 2rpx #ddd solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+}
+
+.font-icon {
+  font-size: 50rpx;
+  color:white;
+}
+
+.orderLeft {
+  display: flex;
+  align-items: center;
+}
+
+.otherMoney {
+  padding-top: 10rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.bottom .buycar_icon {
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius: 50%;
+  background:  #00ACFF;
+  margin-left: 40rpx;
+}
+
+.bottom .buycar_num {
+  text-align: center;
+  line-height: 28rpx;
+  background: #f54949;
+  color: white;
+  border-radius: 50%;
+  width: 28rpx;
+  height: 28rpx;
+  font-size: 20rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}
+
+.bottom .totalMoney {
+  margin-left: 40rpx;
+  z-index: 9;
+}
+
+.bottom .toPay {
+  padding: 40rpx 80rpx;
+  background-color: #00ACFF;
+  color: white
+}

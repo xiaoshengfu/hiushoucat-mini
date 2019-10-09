@@ -1,0 +1,36 @@
+/* pages/index/completed-order/completed-order.wxss */
+@import '../order-template/order-template.wxss';
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.container-item {
+  position: relative;
+  font-size: 30rpx;
+}
+
+.item {
+  padding: 16rpx 0rpx 20rpx;
+}
+
+.item-active {
+  color: #00acff;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #e7eaef;
+}
+
+.under-line {
+  height: 7rpx;
+  bottom: -4rpx;
+  z-index: 999;
+  position: absolute;
+  background-color: #00acff;
+}

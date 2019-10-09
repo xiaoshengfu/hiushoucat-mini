@@ -1,0 +1,33 @@
+
+.order
+{
+  display: flex;
+  flex-direction: row;
+  padding: 0rpx 40rpx 10rpx;
+}
+.order-pic
+{
+  float: left; 
+}
+.order-info
+{
+  z-index: 999rpx;
+  height:170rpx;
+  display:flex;
+  flex-direction: column;
+  margin-left: -30rpx;
+}
+.detail
+{
+  display: flex;
+  font-size: 30rpx;
+  margin-top:2rpx;
+  white-space: nowrap;
+  border-bottom: 1rpx #ddd solid;
+}
+.order-info input
+{
+
+  font-size: 30rpx;
+  margin-top: 2rpx
+}

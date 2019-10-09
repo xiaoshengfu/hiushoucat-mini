@@ -1,0 +1,14 @@
+<template name="orderlist">
+  <view class="order">
+    <view class='order-pic'>
+      <image src='{{waste.pictureUrl}}' class='order-pic'/>
+    </view>
+    <view class='order-info'>
+      <view class='detail'>{{waste.name}}(预估价格：{{(estimateUnitPrice+attributePrice)/100}}元 x{{estimateNum }}{{unit==1?'斤':(unit==2?'公斤':(unit==3?'吨':(unit==4?'台':(unit==5?'部':'个'))))}})
+      </view>
+      <input type="digit" style='border-bottom: 1rpx #ddd solid;' bindinput="getRealPice" data-name='{{waste.name}}' data-orderItemId='{{orderItemId}}' placeholder="请输入实际单价" placeholder-style=" color: #999;font-size: 30rpx;margin-top: 2rpx" />
+      <input name="numbers" type="digit" style='border-bottom: 1rpx #ddd solid;' bindinput="getNum" data-name='{{waste.name}}' data-orderItemId='{{orderItemId}}' placeholder="请输入实际数量  ({{unit==1?'斤':(unit==2?'公斤':(unit==3?'吨':(unit==4?'台':(unit==5?'部':'个'))))}})"
+        placeholder-style=" color: #999;font-size: 30rpx;margin-top: 2rpx" />
+    </view>
+  </view>
+</template>

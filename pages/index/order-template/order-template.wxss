@@ -1,0 +1,112 @@
+.page {
+  padding: 30rpx 40rpx 0rpx;
+  border-radius: 20rpx;
+}
+
+.page .orderInfo {
+  margin-bottom: 30rpx;
+}
+
+.orderInfo-top {
+  display: flex;
+  background: #f8f8ff;
+  justify-content: space-between;
+  padding: 20rpx 10rpx 20rpx 65rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.orderInfo-top text :nth-child(1) {
+  margin-top: 20rpx;
+  font-size: 35rpx;
+  color: #999;
+}
+
+.orderInfo-top text :nth-child(2) {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.orderInfo-middle {
+  background: white;
+  padding: 20rpx 0;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.message {
+  display: flex;
+  line-height: 60rpx;
+  padding: 0 40rpx;
+  justify-content: space-between;
+}
+
+.message .tel {
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}
+
+.message .time {
+  font-size: 30rpx;
+}
+
+.message .address {
+  margin-left: 58rpx;
+  font-size: 30rpx;
+}
+
+.order_message {
+  color: #999;
+  font-size: 28rpx;
+  display: inline-block;
+  width: 450rpx;
+  size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.orderInfo-bottom {
+  padding: 20rpx 0 10rpx 0rpx;
+  clear: both;
+  border-top: 2rpx solid #f2f2f2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.peice-text {
+  font-size: 35rpx;
+  margin-right: 38rpx;
+}
+
+.orderInfo-bottom .cancel {
+  width: 140rpx;
+  text-align: center;
+  display: inline-block;
+  padding: 14rpx 13rpx;
+  background: #00acff;
+  border: 2rpx #00acff solid;
+  margin-left: 10rpx;
+  border-radius: 20rpx;
+  color: #f0f8ff;
+  font-size: 25rpx;
+}
+
+.price {
+  font-size: 34rpx;
+  color: #f33;
+}
+
+.font-icon {
+  size: 40rpx;
+  color: #999;
+}
+
+.br {
+  padding-bottom: 1rpx;
+}

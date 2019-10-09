@@ -1,0 +1,45 @@
+<template name="orderlist">
+  <view class="page">
+    <view class="orderInfo">
+      <view class="orderInfo-top">
+        <view>
+          <text>{{item[0].userAddress.name}}({{item[0].userAddress.sex > 1?'女士':'先生'}})</text>
+        </view>
+        <navigator url='../orderDetail/orderDetail?wasteOrderId={{item[0].wasteOrderId}}&id={{id}}&activeTab={{activeTab}}' hover-class="none">
+          <text>查看订单信息</text>
+          <text class="iconfont icon-right font-icon"></text>
+        </navigator>
+      </view>
+      <view class="orderInfo-middle">
+        <view class="message" bindtap='call' data-tel="{{item[0].userAddress.telephone}}">
+          <text class='tel'>手机号</text>
+          <text class="order_message">{{item[0].userAddress.telephone}}</text>
+        </view>
+        <view class="message">
+          <text class='time'>预约时间</text>
+          <text class="order_message">{{item[1].reserveTime}}</text>
+        </view>
+        <view class="message">
+          <text class='address'>地址</text>
+          <text class="order_message">{{item[0].userAddress.address}}</text>
+        </view>
+        <view class="orderInfo-bottom">
+          <view>
+            <text class='peice-text'>预估价格</text>
+            <text class="price">{{item[0].estimatePrice/100}}元</text>
+          </view>
+
+          <!-- 未完成订单有取消订单 activeTab==-1-->
+          <view style=' margin-left:70rpx;' wx:if="{{activeTab <0}}">
+            <view hover-class="navigator-hover" class="cancel " bindtap='deleteTap' data-wasteOrderId="{{item[0].wasteOrderId}}">
+              取消订单
+            </view>
+          </view>
+          <!-- 历史订单提交无取消订单 -->
+          <view style=' margin-left:70rpx;' wx:else></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='br'> </view>
+</template>

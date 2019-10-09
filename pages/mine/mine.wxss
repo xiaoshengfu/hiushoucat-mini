@@ -1,0 +1,59 @@
+/* pages/mine/mine.wxss */
+
+.page {
+  top: -1.1rem;
+  position: relative;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 370rpx;
+  text-align: center;
+  background: url(http://39.107.226.68/group1/M00/00/00/wKgBe1rNUjKAEMoFAAM7AIaFeLw975.jpg) 
+}
+
+.user image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin: 80rpx auto 30rpx;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.user .name {
+  margin-bottom: 40rpx;
+  color: #fff;
+}
+
+button {
+  text-align: left;
+  line-height: 45rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.option-font-icon {
+  font-size: 33rpx;
+  position: relative;
+  padding: 30rpx;
+  color: rgba(128, 128, 128, 1.2);
+  background-color: #fff;
+  border: 1px solid rgba(230, 230, 250, 0.2);
+  padding-left: 100rpx;
+}
+
+.option-font-icon .font-icon {
+  top: 24rpx;
+  font-size: 50rpx;
+  position: absolute;
+  left: 20rpx;
+}
+
+.padding-top {
+  margin-top: 20rpx;
+}
+

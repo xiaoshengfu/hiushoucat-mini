@@ -1,0 +1,21 @@
+/* pages/mine/setting/setting.wxss */
+.padding {
+  margin-top: 20rpx;
+}
+
+.contain {
+  padding: 30rpx;
+  border-radius: 4%;
+  border: 1rpx solid red;
+}
+.button {
+  font-size: 33rpx;
+  line-height:50rpx;
+}
+
+.button text {
+  color: #f08080;
+}
+
+
+

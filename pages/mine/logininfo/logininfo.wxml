@@ -1,0 +1,23 @@
+<!--pages/mine/logininfo/logininfo.wxml-->
+<view class="option padding">
+  <view class='info'>真实姓名
+    <text class="user-info">{{userdata.name}}</text>
+  </view>
+</view>
+
+<view class="option padding">
+  <view class='info'>性别
+    <text class="user-info-sex">{{userdata.sex==null? '':(userdata.sex==1?'男':'女')}}</text>
+  </view>
+</view>
+
+<view class="option padding">
+  <view class='info'>手机号码
+    <text class="user-info-tel">{{userdata.telephone}}</text>
+  </view>
+</view>
+
+<view url="../address/address" class="option padding">
+  <view class='info'>地址信息</view>
+  <text class="user-info-address">{{userdata.address}}</text>
+</view>

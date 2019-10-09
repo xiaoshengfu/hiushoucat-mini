@@ -1,0 +1,94 @@
+<!--pages/index/orderDetail/orderDetail.wxml-->
+<import src='orderDetail-template/orderDetail-template.wxml' />
+<import src='history-orderDetail-template/history-orderDetail-template.wxml' />
+
+<view class="prompt" wx:if="{{information}}">
+  <text class="{{type}}">{{information}}</text>
+</view>
+<view class='page'>
+  <view class="map" style="position:static" wx:if="{{id < 2}}">
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18" controls="{{controls}}" markers="{{markers}}" polyline="{{polyline}}" show-location style="width: 100%; height: 60vh;">
+    </map>
+  </view>
+  <view style='background: white;'>
+    <view class="Titles">
+      <view class="title">订单信息</view>
+    </view>
+        <view class="items">
+      <view class="item">单号</view>
+      <view class="contain">{{List.wasteOrderId}}</view>
+    </view>
+    <view class="items">
+      <view class="item">用户姓名</view>
+      <view class="contain">{{List.userAddress.name}}</view>
+    </view>
+    <view class="items">
+      <view class="item">手机号</view>
+      <view class="contain">{{List.userAddress.telephone}}</view>
+    </view>
+    <view class="items">
+      <view class="item">预约时间</view>
+      <view class="contain">{{reserveTime}}</view>
+    </view>
+    <view class="items">
+      <view class="item">接单时间</view>
+      <view class="contain">{{confirmTime}}</view>
+    </view>
+    <view class="items">
+      <view class="item">地址</view>
+      <view class="contain">{{List.userAddress.address}}
+      </view>
+    </view>
+    <view class="items">
+      <view class="item">留言</view>
+      <view class="contain">{{List.message}}</view>
+    </view>
+    <!-- 被取消订单 activeTab==0-->
+    <!-- 只有已失效订单才有失效原因 activeTab=1为已失效 -->
+    <view class="items" wx:if="{{activeTab > 0}}">
+      <view class="item">失效原因</view>
+      <view class="contain">{{List.invalidReason}}</view>
+    </view>
+    <!-- 历史订单 id==2-->
+    <view class="items" wx:if="{{id > 1}}">
+      <view class="item">预估价格</view>
+      <view class="contain">{{estimatePrice}}元</view>
+    </view>
+    <view class="items" wx:if="{{id > 1}}">
+      <view class="item">成交价格</view>
+      <view class="contain">{{realUnitPrice}}元</view>
+    </view>
+  </view>
+  <view class="contain-item">
+    <view class="Titles">
+      <view class="title">订单内容</view>
+    </view>
+    <!-- 历史订单 id==2-->
+    <block wx:for='{{List.wasteOrderItems}}' wx:key="*this">
+      <view class="order-contain" wx:if="{{id > 1}}">
+        <template is="historyorderlist" data="{{...item}}" />
+      </view>
+      <!-- 取消订单 id==1-->
+      <!-- 未完成订单 id==1-->
+      <view class="order-contain" wx:else>
+        <template is="orderlist" data="{{...item}}" />
+      </view>
+    </block>
+    <view class='br'></view>
+    <view class="bottom" wx:if="{{id < 2}}">
+      <view class="orderLeft">
+        <view class="buycar_icon">
+          <view class="iconfont icon-gouwukuang font-icon" ></view>
+          <view class="buycar_num">{{num==null?0:num}}</view>
+        </view>
+        <view class="totalMoney">
+          <view class="price">合计：{{totalMoney==null?0:totalMoney}}元</view>
+          <view class="otherMoney">预估价格:{{estimatePrice}}元</view>
+        </view>
+      </view>
+      <view class="toPay" bindtap="toSubmit">
+        <text>提交订单</text>
+      </view>
+    </view>
+  </view>
+</view>

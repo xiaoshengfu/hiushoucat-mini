@@ -1,0 +1,38 @@
+
+.order
+{
+  display: flex;
+  flex-direction: row;
+  padding: 0rpx 40rpx 10rpx;
+}
+.order-pic
+{
+  width: 160rpx;
+  height:140rpx;
+  float: left; 
+  padding-right: 70rpx;
+}
+.order-info
+{
+  height:140rpx;
+  display:flex;
+  flex-direction: column;
+}
+.detail
+{
+  display: flex;
+  font-size: 30rpx;
+  margin-top: -1rpx;
+  padding-bottom: 10rx;
+  white-space: nowrap;
+  border-bottom: 1rpx #ddd solid;
+}
+.order-info input
+{
+  font-size: 30rpx;
+  margin-top: 2rpx
+}
+.border-bottom
+{
+  border-bottom: 1rpx #ddd solid;
+}

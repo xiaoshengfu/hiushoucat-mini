@@ -1,0 +1,36 @@
+<!--pages/help/help.wxml-->
+<view style="position:relative;">
+  <view class='view'> 
+    <image src='{{src[0]}}' class='image-one'/>
+    <view class='contain'  style=" top:-50rpx;">
+      <view class='title'>拒绝传统回收</view>
+      <text>劳累不稳定 \n</text>
+      <text>价格忽高忽低不透明</text>
+    </view>
+  </view>
+  <view class='view'>
+    <image src='{{src[1]}}'  class='image-two' />
+    <view class='contain' style=" top:6rpx;" >
+      <view class='title'>全新回收者</view>
+      <text>随时随地接单 \n</text>
+      <text>不再风吹日晒的蹲点回收</text>
+    </view>
+  </view>
+
+  <view class='view' style="top:-60rpx;">
+    <image src='{{src[2]}}' class='image-three' />
+    <view class='contain' style="top:-140rpx;">
+      <view class='title'>欢迎加入</view>
+      <text>我们不生产废品\n我们是废品的搬运工</text>
+    </view>
+  </view>
+
+
+  <view class='view' style="top:-160rpx;">
+    <image src='{{src[3]}}' class='image-four' />
+    <view class='contain'>
+      <view class='title'>邀请好友共同加入</view>
+      <text>让回收变得更加简单\n</text>
+    </view>
+  </view>
+</view>

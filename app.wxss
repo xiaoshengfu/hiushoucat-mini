@@ -1,0 +1,158 @@
+@import "utils/fonts/font.wxss";
+
+page {
+  min-height: 100%;
+  display: block;
+  background-color: #f8f8f8;
+}
+
+/*弹性盒子模型*/
+
+.display {
+  display: flex;
+  display: -webkit-box; /* Safari、Opera 以及 Chrome */
+  display: -webkit-flex; /* Safari、Opera 以及 Chrome */
+}
+
+/*弹性盒子模型居中对齐*/
+
+.display-center {
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+}
+
+/*弹性盒子模型居中对齐*/
+
+.display-center {
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+}
+
+/*暂无订单*/
+
+.search_no {
+  width: 100%;
+  display: block;
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 300rpx;
+}
+
+.font_14 {
+  font-size: 15px;
+}
+
+.scimg {
+  width: 300rpx;
+  height: 300rpx;
+  display: inline-block;
+  background-size: 100px;
+}
+
+/*选项样式*/
+
+.option {
+  display: flex;
+  flex-direction: row;
+  margin: 0rpx 30rpx;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  font-size: 33rpx;
+  position: relative;
+  color: rgba(128, 128, 128, 1.2);
+  background-color: #fff;
+  border: 1px solid rgba(230, 230, 250, 0.2);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* 阴影 */
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*用户信息格式*/
+
+.info {
+  font-size: 33rpx;
+  white-space: nowrap; /*强制一行*/
+  overflow: hidden;
+}
+
+.option .info .user-info {
+  margin-left: 340rpx;
+  font-size: 33rpx;
+  text-overflow: ellipsis; /*三行字数过多省略号代替*/
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*提示信息*/
+
+.prompt {
+  top: 28rpx;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+  position: fixed;
+  animation: promptAction 3s;
+  -webkit-animation: promptAction 3s; /* Safari  */
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.fail {
+  background-color: #f08080;
+  color: #fff;
+  padding: 15rpx 35rpx;
+  border-radius: 40rpx;
+  box-shadow: 0rpx 3rpx 6rpx rgba(220, 220, 220, 0.5);
+  -webkit-box-shadow: 0px 3rpx 6rpx rgba(220, 220, 220, 0.5);
+}
+
+.success {
+  background-color: #00acff;
+  color: #fff;
+  padding: 15rpx 35rpx;
+  border-radius: 40rpx;
+  box-shadow: 0rpx 3rpx 6rpx rgba(220, 220, 220, 0.5);
+  -webkit-box-shadow: 0px 3rpx 6rpx rgba(220, 220, 220, 0.5);
+}
+
+@keyframes promptAction {
+  0% {
+    transform: translate(0, -10rpx);
+    -webkit-transform: translate(0, -10rpx);
+    opacity: 0;
+  }
+
+  15% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, -10rpx);
+    -webkit-transform: translate(0, -10rpx);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes promptAction {
+  0% {
+    transform: translate(0, -10rpx);
+    -webkit-transform: translate(0, -10rpx);
+    opacity: 0;
+  }
+
+  15% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, -10rpx);
+    -webkit-transform: translate(0, -10rpx);
+    opacity: 0;
+  }
+}

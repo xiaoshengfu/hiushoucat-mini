@@ -1,0 +1,22 @@
+/* pages/mine/logininfo/logininfo.wxss */
+.padding {
+  margin-top: 20rpx;
+}
+.user-info-tel
+{
+  margin-left:250rpx;
+  font-size:33rpx;
+}
+.user-info-sex
+{
+  margin-left:420rpx;
+  font-size:33rpx;
+}
+.user-info-address
+{
+  margin-left:250rpx;
+  font-size:33rpx;
+  text-overflow:ellipsis;  /*三行字数过多省略号代替*/
+  white-space:nowrap;
+  overflow:hidden;
+}

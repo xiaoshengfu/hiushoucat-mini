@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/orderDetail/orderDetail",
+    "pages/index/undone-order/undone-order",
+    "pages/index/history-order/history-order",
+    "pages/mine/mine",
+    "pages/mine/login/login",
+    "pages/mine/logininfo/logininfo",
+    "pages/mine/setting/setting",
+    "pages/help/help"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#00ACFF",
+    "navigationBarTextStyle": "white"
+  }
+}
